@@ -36,31 +36,35 @@ var app = function(){
 
   // canvas.onclick = drawDoge
 /////////////////////////////////////////RANDOM2/////////////////////////////////////
+//MODERN ART
 
 
-var changeColor = function(){
-  context.strokeStyle = this.value;
-  context.fillStyle = this.value;
-}
+// var changeColor = function(){
+//   context.strokeStyle = this.value;
+//   context.fillStyle = this.value;
+// }
 
-var colorPicker = document.querySelector('#input-color');
-colorPicker.onchange = changeColor;
-var drawAnything = function(x,y){
-  var xpar = x;
-  var ypar = y;
-  context.ellipse(xpar, ypar, xpar-=Math.floor((Math.random() * 100) + 1)
-, ypar+=Math.floor((Math.random() * 40) + 1)
-, 45 * Math.PI/180, 0, 2 * Math.PI);
-  context.stroke();
-  context.fill();
-}
+// var colorPicker = document.querySelector('#input-color');
+// colorPicker.onchange = changeColor;
 
-canvas.onclick = function(event){
-  drawAnything(event.x, event.y);
-}
+// var drawAnything = function(x,y){
+//   var xpar = x + Math.floor((Math.random() * 100));
+//   var ypar = y + Math.floor((Math.random() * 400) -11);
+//     context.beginPath();
+//     context.moveTo(Math.floor((Math.random() * 100))-1,ypar);
+//     context.lineTo(Math.floor((Math.random() * 100))-20, ypar-Math.floor((Math.random() * 11)+20));
+//     context.lineTo(xpar+20,Math.floor((Math.random() * 100)));
+//     context.closePath();
+//     context.stroke()
+//     context.fill();
+// }
+
+// canvas.onclick = function(event){
+//   drawAnything(event.x, event.y);
+// }
 
 ///////////////////////////////////////RANDOM////////////////////////////////////////
-
+//FILL THAT SHEET
 
 // var changeColor = function(){
 //   context.strokeStyle = this.value;
@@ -84,7 +88,7 @@ canvas.onclick = function(event){
 // }
 
 /////////////////////////////////////SQUARE/////////////////////////////////////////
-
+//NEVER THE SAME SQUARES 
 // var changeColor = function(){
 //   context.strokeStyle = this.value;
 //   context.fillStyle = this.value;
