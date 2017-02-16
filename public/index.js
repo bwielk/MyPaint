@@ -35,6 +35,31 @@ var app = function(){
   // }
 
   // canvas.onclick = drawDoge
+
+//////////////////////////////////////////RANSOM CRCLS///////////////////////////////
+
+//
+
+var changeColor = function(){
+  context.strokeStyle = this.value;
+  context.fillStyle = this.value;
+}
+
+var colorPicker  = document.querySelector('#input-color');
+colorPicker.onchange = changeColor;
+
+
+var drawCircle = function(x, y){
+  context.beginPath();
+  context.arc(x, y, 10 + ((Math.random() * 100)-(Math.random() * 100)) ,0, Math.PI*2, true);
+  context.fill();
+}
+
+canvas.onclick = function(event){
+  console.log(event);
+  drawCircle(event.x, event.y);
+}
+
 /////////////////////////////////////////RANDOM2/////////////////////////////////////
 //MODERN ART
 
@@ -88,7 +113,7 @@ var app = function(){
 // }
 
 /////////////////////////////////////SQUARE/////////////////////////////////////////
-//NEVER THE SAME SQUARES 
+// NEVER THE SAME SQUARES 
 // var changeColor = function(){
 //   context.strokeStyle = this.value;
 //   context.fillStyle = this.value;
