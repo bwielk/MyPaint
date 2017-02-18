@@ -1,5 +1,3 @@
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var app = function(){
   var canvas = document.getElementById('main-canvas');
   var context = canvas.getContext('2d');
@@ -11,7 +9,7 @@ var app = function(){
 
   var colorPicker  = document.querySelector('#input-color');
   colorPicker.onchange = changeColor;
-  
+
   // // context.fillStyle = 'PowderBlue';
   // context.fillRect(10,10,50,50);
   // context.fillRect(10, 100, 50, 50);
@@ -35,20 +33,21 @@ var app = function(){
 
 
 ///////////////////////////////////////DOGE////////////////////////////////////////////
-var dogeButton = document.getElementById('doge');
-var img = document.createElement('img');
-img.src = 'http://cultofthepartyparrot.com/parrots/witnessprotectionparrot.gif';
 
-var drawDoge = function(event){
+var parrotButton = document.getElementById('doge');
+var img = document.createElement('img');
+img.src = 'https://ih1.redbubble.net/image.203941677.9142/flat,800x800,070,f.jpg';
+
+var drawParrot = function(event){
   console.log('img',img)
   context.drawImage(img, event.x, event.y, 90, 90);
 }
 
-dogeButton.onclick = function(){
-  canvas.onclick = drawDoge;
+parrotButton.onclick = function(){
+  canvas.onclick = drawParrot;
 }
 
-//////////////////////////////////////////RANSOM CRCLS///////////////////////////////
+//////////////////////////////////////////RANDOM CIRCLES///////////////////////////////
 
 var rcButton = document.getElementById('random_circles');
 
@@ -65,14 +64,6 @@ rcButton.onclick = function(){
 }
 
 /////////////////////////////////////////RANDOM2/////////////////////////////////////
-
-// var changeColor = function(){
-//   context.strokeStyle = this.value;
-//   context.fillStyle = this.value;
-// }
-
-// var colorPicker = document.querySelector('#input-color');
-// colorPicker.onchange = changeColor;
 
 var modArtButton = document.getElementById('mod_art');
 
@@ -96,22 +87,14 @@ modArtButton.onclick = function(){
 
 ///////////////////////////////////////RANDOM////////////////////////////////////////
 
-// var changeColor = function(){
-//   context.strokeStyle = this.value;
-//   context.fillStyle = this.value;
-// }
-
-// var colorPicker = document.querySelector('#input-color');
-// colorPicker.onchange = changeColor;
-
 var ftsButton = document.getElementById('fts');
 
 var fillIt = function(x,y){
   var xpar = x;
   var ypar = y;
   context.ellipse(xpar, ypar, xpar-=Math.floor((Math.random() * 100) + 1)
-, ypar+=Math.floor((Math.random() * 40) + 1)
-, 45 * Math.PI/180, 0, 2 * Math.PI);
+    , ypar+=Math.floor((Math.random() * 40) + 1)
+    , 45 * Math.PI/180, 0, 2 * Math.PI);
   context.stroke();
   context.fill();
 }
@@ -122,16 +105,7 @@ ftsButton.onclick = function(){
   }
 }
 
-
 /////////////////////////////////////SQUARE/////////////////////////////////////////
-
-// var changeColor = function(){
-//   context.strokeStyle = this.value;
-//   context.fillStyle = this.value;
-// }
-
-// var colorPicker  = document.querySelector('#input-color');
-// colorPicker.onchange = changeColor;
 
 var ntssButton = document.getElementById('random_squares');
 
@@ -150,15 +124,6 @@ ntssButton.onclick = function(){
 }
 
 ////////////////////////////////////TRIANGLE////////////////////////////////////////
-
-
-// var changeColor = function(){
-//     context.strokeStyle = this.value;
-//     context.fillStyle = this.value;
-//   }
-
-// var colorPicker  = document.querySelector('#input-color');
-// colorPicker.onchange = changeColor;
 
 var triangleButton = document.getElementById('triangles');
 
@@ -179,28 +144,6 @@ triangleButton.onclick = function(){
     drawTriangle(event.x, event.y);
   }
 }
-
-///////////////////////////////////////CIRCLE///////////////////////////////////////
-  // var changeColor = function(){
-  //   context.strokeStyle = this.value;
-  //   context.fillStyle = this.value;
-  // }
-
-  // var colorPicker  = document.querySelector('#input-color');
-  // colorPicker.onchange = changeColor;
-
-
-  // var drawCircle = function(x, y){
-  //   context.beginPath();
-  //   context.arc(x, y, 50,0, Math.PI*2, true);
-  //   context.fill();
-  // }
-
-  // canvas.onclick = function(event){
-  //   console.log(event);
-  //   drawCircle(event.x, event.y);
-  // }
-//////////////////////////////////////////////////////////////////////////////////////
 }
 
 window.onload = app;
